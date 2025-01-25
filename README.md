@@ -26,3 +26,23 @@ Create and activate conda environment named ```Mind-animator``` from our ```envi
 conda env create -f environment_MA.yml
 conda activate Mind-animator
 ```
+
+Since our project is built on Tune-a-video, if you encounter issues with the above commands, you can also follow the steps below one by one.
+
+*  Create a virtual environment for Tune-a-video.
+```sh
+pip install -r Tune-a-video-requirements.txt
+```
+*  Install CLIP.
+```sh
+pip install ftfy regex tqdm
+pip install git+https://github.com/openai/CLIP.git
+```
+*  Install the remaining packages as needed.
+
+
+
+
+
+
+
