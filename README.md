@@ -6,3 +6,10 @@ This is the official code for the paper "Animate Your Thoughts: Reconstruction o
 
 ## <p align="center">  Schematic diagram of Mind-Animator  </p> 
 ![](https://github.com/ReedOnePeck/Mind-Animator/blob/main/images/method.png)<br>
+
+
+## <p align="center">  News  </p> 
+- Jan. 25, 2025. Project release.
+- Jan. 23, 2025. Our paper is accpeted at ICLR2025!
+
+# <p align="center"> Steps to reproduce Mind-Animator </p> 
