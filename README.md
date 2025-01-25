@@ -20,3 +20,9 @@ This code was developed and tested with:
 *  PyTorch version 1.12.1
 *  A100 80G
 
+## <p align="center">  Environment setup  </p> 
+Create and activate conda environment named ```Mind-animator``` from our ```environment_MA.yml```
+```sh
+conda env create -f environment_MA.yml
+conda activate Mind-animator
+```
