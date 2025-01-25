@@ -13,3 +13,10 @@ This is the official code for the paper "Animate Your Thoughts: Reconstruction o
 - Jan. 23, 2025. Our paper is accpeted at ICLR2025!
 
 # <p align="center"> Steps to reproduce Mind-Animator </p> 
+## <p align="center">  Preliminaries  </p> 
+This code was developed and tested with:
+
+*  Python version 3.9.16
+*  PyTorch version 1.12.1
+*  A100 80G
+
