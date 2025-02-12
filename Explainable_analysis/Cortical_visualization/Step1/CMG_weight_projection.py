@@ -25,20 +25,9 @@ def clones(module, N):
 
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout, max_len=500000):
-        """
-        位置编码器类的初始化函数
-
-        共有三个参数，分别是
-        d_model：词嵌入维度
-        dropout: dropout触发比率
-        max_len：每个句子的最大长度
-        """
         super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
 
-        # Compute the positional encodings
-        # 注意下面代码的计算方式与公式中给出的是不同的，但是是等价的，你可以尝试简单推导证明一下。
-        # 这样计算是为了避免中间的数值计算结果超出float的范围，
         pe = torch.zeros(max_len, d_model)
         position = torch.arange(0, max_len).unsqueeze(1)
         div_term = torch.exp(torch.arange(0, d_model, 2) *
@@ -62,17 +51,12 @@ class Embeddings(nn.Module):
 
 class LayerNorm(nn.Module):
     def __init__(self, feature_size, eps=1e-6):
-        #初始化函数有两个参数:feature_size,表示词嵌入的维度; eps是一个足够小的数，防止分母为0，默认是1e-6。
         super(LayerNorm, self).__init__()
-        #根据features的形状初始化两个参数张量a2，和b2，第一初始化为1张量，第二个初始化为0张量，这两个张量就是规范化层的参数。因为直接对上一层得到的结果做规范化公式计算，将改变结果的正常表征，因此就需要有参数作为调节因子，使其即能满足规范化要求，又能不改变针对目标的表征，最后使用nn.parameter封装，代表他们是模型的参数
         self.a_2 = nn.Parameter(torch.ones(feature_size))
         self.b_2 = nn.Parameter(torch.zeros(feature_size))
-        #把eps传到类中
         self.eps = eps
 
     def forward(self, x):
-    #输入参数x代表来自上一层的输出，在函数中，首先对输入变量x求其最后一个维度的均值，并保持输出维度与输入维度一致，接着再求最后一个维度的标准差，然后就是根据规范化公式，用x减去均值除以标准差获得规范化的结果。
-    #最后对结果乘以我们的缩放参数，即a2,*号代表同型点乘，即对应位置进行乘法操作，加上位移参b2，返回即可
         mean = x.mean(-1, keepdim=True)
         std = x.std(-1, keepdim=True)
         return self.a_2 * (x - mean) / (std + self.eps) + self.b_2
@@ -107,13 +91,11 @@ def attention(query, key, value, mask=None, dropout=None):
 
 class MultiHeadedAttention(nn.Module):
     def __init__(self, h, d_model, dropout=0.15):
-        #h代表头数，d_model代表词嵌入的维度
         super(MultiHeadedAttention, self).__init__()
         assert d_model % h ==0
-        self.d_k = d_model // (h*16) #每个头的词向量维度
+        self.d_k = d_model // (h*16)
         self.h = h
 
-        #需要四个投影层，前三个分别作用与k,q,v,最后一个用于多头注意力聚合后的投影层
         self.linears = clones(nn.Linear(d_model, 1024), 3)
         self.linears1 = nn.Linear(1024, d_model)
         self.attn = None
@@ -121,14 +103,12 @@ class MultiHeadedAttention(nn.Module):
 
     def forward(self,query, key, value, mask = None):
         if mask is not None:
-            mask = mask.unsqueeze(1)   #对不同的头使用相同的mask，扩展的维度代表头数
+            mask = mask.unsqueeze(1) 
 
         nbatches = query.size(0)  #batch_size
 
         query, key, value = [l(x).view(nbatches, -1, self.h, self.d_k).transpose(1,2)
                              for l,x in zip(self.linears, (query, key, value))]
-        #先把k,q,v通过线性映射l(x)后再划分成多头，其中self.h代表头数，self.d_k代表每个头的词向量维度，-1会自动成为句子的长度
-        #为了使注意力机制注意到句子中的每个词，需要让句子长度的维度和词向量维度相邻，因此使用.transpose(1,2)
         x, self.attn = attention(query, key, value, mask = mask, dropout = self.dropout)
         x = x.transpose(1,2).contiguous().view(nbatches, -1, self.h*self.d_k)
         return self.linears1(x)
@@ -262,7 +242,7 @@ def make_model( N=2, d_model=4096*4, d_ff=768, h=8, dropout=0.1):
 def greedy_decode(first_frame,  model, src, src_mask,  max_len ,mask_ratio):
     decoder_input = first_frame
     src = torch.tensor(src)
-    memory = model.encode(src, src_mask)                                        #src的数据类型为tensor
+    memory = model.encode(src, src_mask)                                       
     ys = torch.ones(1, 1).fill_(1).type_as(src.data)
 
     for i in range(max_len-1):
@@ -290,7 +270,7 @@ lin1 = model_content.encoder.lin1.weight.data.cpu().numpy().T
 Content = np.abs(np.mean(((lin0 @ mlp) @ lin1 ), axis=1))
 min_val = np.min(Content)
 max_val = np.max(Content)
-# 进行归一化处理
+
 normalized_array = ((Content - min_val) / (max_val - min_val))
 
 mask = np.load('/nfs/diskstation/DataStation/public_dataset/CC2017_for_video_reconstruction/fMRI_in_fslr/sub03/activated_mask/mask_correct.npy')
