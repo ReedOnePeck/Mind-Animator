@@ -116,8 +116,7 @@ We provide the checkpoints required to reproduce this paper in the link below. D
 
 **Additionally, if you only need to compare our model with others on new metrics, we have also included all reconstruction results on the CC2017 dataset in this folder.**
 
-
-
+![](https://github.com/ReedOnePeck/Mind-Animator/blob/main/images/bfa84fe63a9fac6a3827d87118e2972.png)<br>
 
 
 
