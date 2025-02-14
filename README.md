@@ -109,8 +109,12 @@ The open-source datasets used in this paper can be accessed via the following li
 ```
 
 ### <p > Data preparation. </p> 
+Run the code in Data_preprocess step by step to preprocess the dataset.
 
+### <p >  Download model weights. </p>
+We provide the checkpoints required to reproduce this paper in the link below. Due to the large size of the CMG model weights, we only offer the model weights trained on data from three subjects in the CC2017 dataset. 
 
+**Additionally, if you only need to compare our model with others on new metrics, we have also included all reconstruction results on the CC2017 dataset in this folder.**
 
 
 
