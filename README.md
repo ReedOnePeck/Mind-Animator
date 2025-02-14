@@ -151,7 +151,14 @@ We provide the checkpoints required to reproduce this paper in the link below. D
 ```
 
 ## <p align="center">  Feature extraction  </p> 
+Adjust the file paths accordingly, and then run the following code in the Feature_extraction folder.
+```
+python Feature_extraction/semantic_feature extraction.py
 
+python Feature_extraction/contrastive_target_extraction.py
+
+python Feature_extraction/content_feature_extraction.py
+```
 
 
 
