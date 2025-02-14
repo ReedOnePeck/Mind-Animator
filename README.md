@@ -176,12 +176,12 @@ python Feature_decoding/train_CMG.py --model_dir your_model_save_path --figure_d
 
 ## <p align="center">  Video reconstruction  </p> 
 ```
-python Feature_decoding/train_semantic_decoder.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
-
-python Feature_decoding/train_structure_decoder.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
-
-python Feature_decoding/train_CMG.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
+python Reconstruction/video_recons.py --video_save_folder1 your_model_save_recon --video_save_folder1 your_model_save_recon_and_gt --subj_ID 1 --random_seed 42
 ```
+
+## <p align="center">  Retrieval  </p> 
+
+
 
 
 
