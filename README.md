@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ce73c65a-8b90-4301-964c-48f10c7976b4)# <p align="center"> Mind-Animator </p> 
+# <p align="center"> Mind-Animator </p> 
 This is the official code for the paper "Animate Your Thoughts: Reconstruction of Dynamic Natural Vision from Human Brain Activity"[**ICLR 2025**] [Project page](https://dl.acm.org/doi/10.1145/3581783.3613832)
 
 ## <p align="center">  Related works  </p> 
