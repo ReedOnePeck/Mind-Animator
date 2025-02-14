@@ -1,4 +1,4 @@
-# <p align="center"> Mind-Animator </p> 
+![image](https://github.com/user-attachments/assets/ce73c65a-8b90-4301-964c-48f10c7976b4)# <p align="center"> Mind-Animator </p> 
 This is the official code for the paper "Animate Your Thoughts: Reconstruction of Dynamic Natural Vision from Human Brain Activity"[**ICLR 2025**] [Project page](https://dl.acm.org/doi/10.1145/3581783.3613832)
 
 ## <p align="center">  Related works  </p> 
@@ -191,5 +191,39 @@ python Retrieval/Large_set.py
 
 *  Note that what we aim to test with the shuffle test is whether the correctly decoded videos contain the correct motion features. Therefore, the experiment videos for the shuffle test are only those videos with correct semantic decoding.
 *  By following my tutorial and running the code in Explainable_analysis/Cortical_visualization step by step, you can obtain the cortical surface projection maps displayed in the paper.
+
+## <p align="center">  Acknowledgments  </p> 
+
+We would like to express our gratitude to Prof.Jack L. Gallant and Prof.Shinji Nishimoto for their
+pioneering exploration in the field of video reconstruction and for their high-quality code. We are
+grateful to Prof.Juan Helen Zhou and Dr.Zijiao Chen for their patient answers to our questions and
+for making all the results of the Mind-video test set public. We also extend our thanks to Prof.Michal
+Irani, Dr.Ganit Kupershmidt, and Dr.Roman Beliy for providing us with all the reconstruction results
+of their models on the test set.
+
+We would like to express our appreciation to Prof.Zhongming Liu and Dr.Haiguang Wen for their
+open-sourced high-quality video-fMRI dataset and the preprocessing procedures. Our gratitude
+also goes to the Human Connectome Project (HCP) for providing a large-scale fMRI dataset and
+cortical visualization tools. We are thankful to the Algonauts2021 competition for providing a set of
+pre-processed video-fMRI data from multiple subjects.
+
+We also appreciate the Tune-a-video team for their open-source video editing framework, which allows
+us to reconstruct videos without introducing additional motion information.
+
+
+
+## <p align="center">  Cite  </p> 
+Please cite our paper if you use this code in your own work:
+```
+@article{lu2024animate,
+  title={Animate Your Thoughts: Decoupled Reconstruction of Dynamic Natural Vision from Slow Brain Activity},
+  author={Lu, Yizhuo and Du, Changde and Wang, Chong and Zhu, Xuanliu and Jiang, Liuyun and He, Huiguang},
+  journal={arXiv preprint arXiv:2405.03280},
+  year={2024}
+}
+
+```
+
+
 
 
