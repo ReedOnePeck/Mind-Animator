@@ -162,6 +162,14 @@ python Feature_extraction/content_feature_extraction.py
 
 ## <p align="center">  Feature decoding  </p> 
 
+Adjust the file paths accordingly, and then run the following code in the Feature_extraction folder.
+
+
+
+
+
+
+
 
 
 
