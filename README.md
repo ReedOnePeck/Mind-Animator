@@ -180,8 +180,12 @@ python Reconstruction/video_recons.py --video_save_folder1 your_model_save_recon
 ```
 
 ## <p align="center">  Retrieval  </p> 
+This project has been ongoing for a long time, and I can no longer find the training code. If you're interested, you can use the checkpoints we provided to run Retrieval/small_set.py and Retrieval/Large_set.py.
+```
+python Retrieval/small_set.py
+python Retrieval/Large_set.py
 
-
+```
 
 
 
