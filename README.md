@@ -42,6 +42,7 @@ pip install git+https://github.com/openai/CLIP.git
 
 ## <p align="center">  Data preparation  </p> 
 *  Dataset download.
+
 The open-source datasets used in this paper can be accessed via the following links:
 
 (1) CC2017: https://purr.purdue.edu/publications/2809/1
@@ -50,7 +51,61 @@ The open-source datasets used in this paper can be accessed via the following li
 
 (3) Algonauts2021: http://algonauts.csail.mit.edu/2021/index.html
 
+```
+/data
+┣ 📂 CC2017_Purdue
+┃   ┣ 📂 Stimuli/video_fmri_dataset/stimuli/
+┃   ┃   ┣ 📜 seg1.mp4
+┃   ┃   ┣ 📜 seg2.mp4
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┣ 📜 seg18.mp4
+┃   ┃   ┣ 📜 test1.mp4
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┣ 📜 test5.mp4
+┃   ┣ 📂 Subject01/video_fmri_dataset/subject1
+┃   ┃   ┣ 📂 fmri
+┃   ┃   ┃   ┣ 📂 seg1
+┃   ┃   ┃   ┃   ┣ 📂 cifti
+┃   ┃   ┃   ┃   ┃   ┣ 📜 seg1_1_Atlas.dtseries.nii
+┃   ┃   ┃   ┃   ┃   ┣ 📜 seg1_2_Atlas.dtseries.nii
+┃   ┃   ┃   ┃   ┣ 📂 mni
+┃   ┃   ┃   ┃   ┣ 📂 raw
+┃   ┃   ┃   ┣ 📂 seg2
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┃   ┣ 📂 test5
+┃   ┃   ┣ 📂 smri
+┃   ┃   ┃   ┣ 📜 t1w.nii.gz
+┃   ┃   ┃   ┣ 📜 t2w.nii.gz
 
 
+┣ 📂 HCP
+┃   ┣ 📂 Stumuli_videos
+┃   ┃   ┗ 📜 clip_1.mp4
+┃   ┃   ┗ 📜 clip_1.mp4
+┃   ┃   ┗ ...
+┃   ┃   ┗ 📜 clip_3040.mp4
+┃   ┣ 📂 fMRI_response_surface
+┃   ┃   ┣ 📂 100610
+┃   ┃   ┃   ┣ 📜 preprocessed_fMRI.npy
+┃   ┃   ┣ 📂 102816
+┃   ┃   ┣ 📂 104416
+
+
+┣ 📂 Algonauts2021_data
+┃   ┣ 📂 AlgonautsVideos268_All_30fpsmax
+┃   ┃   ┣ 📜 0001_0-0-1-6-7-2-8-0-17500167280.mp4
+┃   ┃   ┣ 📜 0002_0-0-4-3146384004.mp4
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┣ 📜 1102_meta_R-5602303_250.mp4
+┃   ┣ 📂 participants_data_v2021
+┃   ┃   ┣ 📂 sub01
+┃   ┃   ┃   ┣ 📜 EBA.pkl
+┃   ┃   ┃   ┣ 📜 FFA.pkl
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┃   ┣ 📜 V4.pkl
+┃   ┃   ┣ 📂 sub02
+┃   ┃   ┃   ┗ ...
+┃   ┃   ┣ 📂 sub10
+```
 
 
