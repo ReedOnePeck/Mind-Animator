@@ -189,6 +189,7 @@ python Retrieval/Large_set.py
 
 ## <p align="center">  Explainable_analysis  </p> 
 
-
+*  Note that what we aim to test with the shuffle test is whether the correctly decoded videos contain the correct motion features. Therefore, the experiment videos for the shuffle test are only those videos with correct semantic decoding.
+*  By following my tutorial and running the code in Explainable_analysis/Cortical_visualization step by step, you can obtain the cortical surface projection maps displayed in the paper.
 
 
