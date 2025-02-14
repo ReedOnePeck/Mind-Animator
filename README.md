@@ -40,7 +40,7 @@ pip install git+https://github.com/openai/CLIP.git
 ```
 *  Install the remaining packages as needed.
 
-
+## <p align="center">  Data preparation  </p> 
 
 
 
