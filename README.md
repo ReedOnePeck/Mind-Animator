@@ -41,6 +41,14 @@ pip install git+https://github.com/openai/CLIP.git
 *  Install the remaining packages as needed.
 
 ## <p align="center">  Data preparation  </p> 
+*  Dataset download.
+The open-source datasets used in this paper can be accessed via the following links:
+
+(1) CC2017: https://purr.purdue.edu/publications/2809/1
+
+(2) HCP: https://www.humanconnectome.org/
+
+(3) Algonauts2021: http://algonauts.csail.mit.edu/2021/index.html
 
 
 
