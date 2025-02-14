@@ -27,7 +27,7 @@ conda env create -f environment_MA.yml
 conda activate Mind-animator
 ```
 
-Since our project is built on Tune-a-video, if you encounter issues with the above commands, you can also follow the steps below one by one.
+Since our project is built on Tune-a-video, if you encounter issues with the above commands, you can also follow the steps below.
 
 *  Create a virtual environment for Tune-a-video.
 ```sh
@@ -41,7 +41,7 @@ pip install git+https://github.com/openai/CLIP.git
 *  Install the remaining packages as needed.
 
 ## <p align="center">  Data preparation  </p> 
-*  Dataset download.
+### <p >  Dataset download. </p>
 
 The open-source datasets used in this paper can be accessed via the following links:
 
@@ -107,5 +107,19 @@ The open-source datasets used in this paper can be accessed via the following li
 ┃   ┃   ┃   ┗ ...
 ┃   ┃   ┣ 📂 sub10
 ```
+
+### <p > Data preparation. </p> 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
