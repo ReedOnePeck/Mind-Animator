@@ -171,11 +171,17 @@ python Feature_decoding/train_structure_decoder.py --model_dir your_model_save_p
 
 python Feature_decoding/train_CMG.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
 ```
-The above patch_size setting for CMG is set to 64 by default, which can be very resource-intensive and carries a risk of overfitting. If you're interested, you can set a smaller patch_size to train the model in Feature_decoding/CMG_model_with_more_patchsize.py. However, based on our experimental results, we found that when the patch_size is set smaller, the model is more prone to overfitting, and the reconstructed videos tend to become 'grid-like' (you can also validate this by using the checkpoints we provided for Subject 1 in the CC2017 dataset).
+**The above patch_size setting for CMG is set to 64 by default, which can be very resource-intensive and carries a risk of overfitting. If you're interested, you can set a smaller patch_size to train the model in models/CMG_model_with_more_patchsize.py. However, based on our experimental results, we found that when the patch_size is set smaller, the model is more prone to overfitting, and the reconstructed videos tend to become 'grid-like' (you can also validate this by using the checkpoints we provided for Subject 1 in the CC2017 dataset).**
 
 
+## <p align="center">  Video reconstruction  </p> 
+```
+python Feature_decoding/train_semantic_decoder.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
 
+python Feature_decoding/train_structure_decoder.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
 
+python Feature_decoding/train_CMG.py --model_dir your_model_save_path --figure_dir your_figure_save_path --subj_ID 1
+```
 
 
 
