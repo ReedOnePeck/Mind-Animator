@@ -118,6 +118,37 @@ We provide the checkpoints required to reproduce this paper in the link below. D
 
 ![](https://github.com/ReedOnePeck/Mind-Animator/blob/main/images/bfa84fe63a9fac6a3827d87118e2972.png)<br>
 
+```
+┣ 📂 Mind_Animator_data
+┃   ┣ 📂 Testset_of_Preprocessed_datasets
+┃   ┃   ┣ 📂 CC2017
+┃   ┃   ┃   ┣ 📂 stimuli_clips/Test
+┃   ┃   ┃   ┣ 📂 fMRI_data
+┃   ┃   ┃   ┃   ┣ 📂 sub1
+┃   ┃   ┃   ┃   ┃   ┣ 📂 activated_mask
+┃   ┃   ┃   ┃   ┃   ┃   ┣ 📜 mask_correct.npy
+┃   ┃   ┃   ┃   ┃   ┣ 📂 Test
+┃   ┃   ┃   ┃   ┃   ┃   ┣ 📜 masked4500_test_data.npy
+┃   ┃   ┃   ┃   ┣ 📂 sub2
+┃   ┃   ┃   ┃   ┣ 📂 sub3
+
+┃   ┣ 📂 Model_checkpoints
+┃   ┃   ┣ 📂 Stable_diffusion_ckpt
+┃   ┃   ┃   ┣ 📂 unet
+┃   ┃   ┃   ┣ 📂 text_encoder
+┃   ┃   ┃   ┣ 📂 vae
+┃   ┃   ┃   ┣ 📂 tokenizer
+┃   ┃   ┃   ┣ 📂 scheduler
+┃   ┃   ┣ 📂 Retrieval_task
+┃   ┃   ┣ 📂 Reconstruction_task
+
+┃   ┣ 📂 Reconstruction_results
+┃   ┃   ┣ 📂 CC2017
+┃   ┃   ┃   ┣ 📜 reconstruction_results_sub1.zip
+┃   ┃   ┃   ┣ 📜 reconstruction_results_sub2.zip
+┃   ┃   ┃   ┣ 📜 reconstruction_results_sub3.zip
+
+```
 
 ## <p align="center">  Feature extraction  </p> 
 
