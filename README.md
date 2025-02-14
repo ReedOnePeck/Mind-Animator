@@ -119,6 +119,7 @@ We provide the checkpoints required to reproduce this paper in the link below. D
 ![](https://github.com/ReedOnePeck/Mind-Animator/blob/main/images/bfa84fe63a9fac6a3827d87118e2972.png)<br>
 
 
+## <p align="center">  Feature extraction  </p> 
 
 
 
