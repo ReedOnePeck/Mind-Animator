@@ -188,9 +188,7 @@ python Retrieval/Large_set.py
 ```
 
 ## <p align="center">  Evaluation metric calculation  </p> 
-
-
-
+run the relevant code in the Evaluation_Metrics folder. Note that the calculation of the VIFI_CLIP metric requires the environment from [ViFi-CLIP](https://github.com/muzairkhattak/ViFi-CLIP), and you will need to convert the .mp4 files to .avi format in advance.
 
 
 
