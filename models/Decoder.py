@@ -112,7 +112,7 @@ def clones(module, N):
     return nn.ModuleList([copy.deepcopy(module) for _ in range(N)])
 
 class PositionalEncoding(nn.Module):
-    def __init__(self, d_model, dropout, max_len=500000):
+    def __init__(self, d_model, dropout, max_len=10):
         super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
 
